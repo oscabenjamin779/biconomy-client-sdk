@@ -1,5 +1,5 @@
 import { IBundler } from './interfaces/IBundler'
-import { UserOperation, ChainId } from '@biconomy/core-types'
+import { UserOperation, ChainId } from '@biconomy-devx/core-types'
 import {
   GetUserOperationResponse,
   GetUserOpByHashResponse,
@@ -12,7 +12,7 @@ import {
   UserOpByHashResponse
 } from './types/Types'
 import { resolveProperties } from 'ethers/lib/utils'
-import { deepHexlify, getTimestampInSeconds, Logger, RPC_PROVIDER_URLS } from '@biconomy/common'
+import { deepHexlify, getTimestampInSeconds, Logger, RPC_PROVIDER_URLS } from '@biconomy-devx/common'
 import { HttpMethod, sendRequest } from './utils/httpRequests'
 import { transformUserOP } from './utils/HelperFunction'
 import { UserOpReceiptIntervals } from './utils/Constants'

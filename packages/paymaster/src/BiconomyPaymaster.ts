@@ -1,6 +1,6 @@
-import { sendRequest, HttpMethod } from '@biconomy/common'
+import { sendRequest, HttpMethod } from '@biconomy-devx/common'
 import { resolveProperties } from '@ethersproject/properties'
-import { UserOperation } from '@biconomy/core-types'
+import { UserOperation } from '@biconomy-devx/core-types'
 import { IPaymaster } from 'interfaces/IPaymaster'
 import { PaymasterAndDataResponse, PaymasterConfig } from './types/Types'
 

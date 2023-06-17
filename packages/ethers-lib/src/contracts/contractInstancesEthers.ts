@@ -25,7 +25,7 @@ import { DefaultCallbackHandler_v1_0_0__factory as DefaultCallbackHandlerContrac
 import DefaultCallbackHandlerEthersContract_v1_0_0 from './DefaultCallbackHandlerContract/v1.0.0/DefaultCallbackHandlerEthersContract'
 
 import { JsonRpcProvider } from '@ethersproject/providers'
-import { SmartAccountVersion } from '@biconomy/core-types'
+import { SmartAccountVersion } from '@biconomy-devx/core-types'
 
 export function getSmartWalletContractInstance(
   smartAccountVersion: SmartAccountVersion,

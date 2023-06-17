@@ -14,7 +14,7 @@ import {
   NetworkConfig,
   ZERO_ADDRESS,
   IFallbackAPI
-} from '@biconomy/core-types'
+} from '@biconomy-devx/core-types'
 import NodeClient, {
   ISmartAccount,
   ChainConfig,
@@ -24,7 +24,7 @@ import NodeClient, {
   BalancesResponse,
   BalancesDto,
   UsdBalanceResponse
-} from '@biconomy/node-client'
+} from '@biconomy-devx/node-client'
 import { JsonRpcProvider, Provider, Web3Provider } from '@ethersproject/providers'
 import * as _ from 'lodash'
 import EventEmitter from 'events'
@@ -38,17 +38,17 @@ import {
   FallbackGasTankAPI,
   ERC4337EthersSigner,
   BaseAccountAPI
-} from '@biconomy/account-abstraction'
+} from '@biconomy-devx/account-abstraction'
 import {
   Logger,
   deployCounterFactualEncodedData,
   getWalletInfo,
   updateImplementationEncodedData,
   fallbackHandlerEncodedData
-} from '@biconomy/common'
+} from '@biconomy-devx/common'
 
 import { BigNumber, ethers, Signer } from 'ethers'
-import { Transaction } from '@biconomy/core-types'
+import { Transaction } from '@biconomy-devx/core-types'
 import ContractUtils from './ContractUtils'
 
 // Create an instance of Smart Account with multi-chain support.

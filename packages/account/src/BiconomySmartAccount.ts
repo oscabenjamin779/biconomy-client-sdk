@@ -9,11 +9,11 @@ import {
   getEntryPointContract,
   getSAFactoryContract,
   getSAProxyContract
-} from '@biconomy/common'
+} from '@biconomy-devx/common'
 import { BiconomySmartAccountConfig, Overrides } from './utils/Types'
-import { UserOperation, Transaction, SmartAccountType } from '@biconomy/core-types'
-import NodeClient from '@biconomy/node-client'
-import INodeClient from '@biconomy/node-client'
+import { UserOperation, Transaction, SmartAccountType } from '@biconomy-devx/core-types'
+import NodeClient from '@biconomy-devx/node-client'
+import INodeClient from '@biconomy-devx/node-client'
 import { IBiconomySmartAccount } from 'interfaces/IBiconomySmartAccount'
 import {
   ISmartAccount,
@@ -24,7 +24,7 @@ import {
   SmartAccountByOwnerDto,
   SmartAccountsResponse,
   SCWTransactionResponse
-} from '@biconomy/node-client'
+} from '@biconomy-devx/node-client'
 import {
   ENTRYPOINT_ADDRESSES,
   BICONOMY_FACTORY_ADDRESSES,

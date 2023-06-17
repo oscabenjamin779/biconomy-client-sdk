@@ -1,4 +1,4 @@
-import { MultiSendCallOnlyContract } from '@biconomy/core-types'
+import { MultiSendCallOnlyContract } from '@biconomy-devx/core-types'
 import {
   MultiSendCallOnlyContract_v1_0_0 as MultiSendCallOnly_TypeChain,
   MultiSendCallOnlyContract_v1_0_0Interface as MultiSendCallOnlyContractV100Interface
