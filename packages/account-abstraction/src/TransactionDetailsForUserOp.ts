@@ -1,6 +1,6 @@
 import { BigNumberish } from 'ethers'
 import { BytesLike } from '@ethersproject/bytes'
-import { PaymasterServiceDataType } from '@biconomy/core-types'
+import { PaymasterServiceDataType } from '@biconomy-devx/core-types'
 
 export interface TransactionDetailsForUserOp {
   target: string

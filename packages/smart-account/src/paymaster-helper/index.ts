@@ -1,8 +1,8 @@
-import { PaymasterAPI } from '@biconomy/account-abstraction'
-import { BiconomyVerifyingPaymasterAPI } from '@biconomy/account-abstraction'
-import { BiconomyTokenPaymasterAPI } from '@biconomy/account-abstraction'
-import { PaymasterServiceDataType } from '@biconomy/core-types'
-import { Logger } from '@biconomy/common'
+import { PaymasterAPI } from '@biconomy-devx/account-abstraction'
+import { BiconomyVerifyingPaymasterAPI } from '@biconomy-devx/account-abstraction'
+import { BiconomyTokenPaymasterAPI } from '@biconomy-devx/account-abstraction'
+import { PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { Logger } from '@biconomy-devx/common'
 import fetch from 'node-fetch'
 
 export enum HttpMethod {

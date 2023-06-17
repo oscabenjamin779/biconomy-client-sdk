@@ -7,7 +7,7 @@ import {
   IEvmNetworkManagerTransaction,
   SmartAccountVersion,
   SmartWalletContract
-} from '@biconomy/core-types'
+} from '@biconomy-devx/core-types'
 import { ethers } from 'ethers'
 import {
   getMultiSendContractInstance,

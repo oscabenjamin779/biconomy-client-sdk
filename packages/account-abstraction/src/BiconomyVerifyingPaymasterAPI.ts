@@ -1,12 +1,12 @@
 import { resolveProperties } from '@ethersproject/properties'
-import { UserOperation } from '@biconomy/core-types'
+import { UserOperation } from '@biconomy-devx/core-types'
 import { HttpMethod, sendRequest } from './utils/httpRequests'
 import {
   PaymasterConfig,
   PaymasterServiceDataType,
   VerifyingPaymasterData
-} from '@biconomy/core-types'
-import { Logger } from '@biconomy/common'
+} from '@biconomy-devx/core-types'
+import { Logger } from '@biconomy-devx/common'
 import { PaymasterAPI } from './PaymasterAPI'
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { UserOperation } from '@biconomy/core-types'
-import { PaymasterServiceDataType } from '@biconomy/core-types'
+import { UserOperation } from '@biconomy-devx/core-types'
+import { PaymasterServiceDataType } from '@biconomy-devx/core-types'
 
 export interface IPaymasterAPI {
   getPaymasterAndData(

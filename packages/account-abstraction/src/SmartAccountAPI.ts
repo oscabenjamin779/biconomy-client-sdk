@@ -1,23 +1,23 @@
 import { BigNumber, BigNumberish } from 'ethers'
-// import { EntryPointContractV100 } from '@biconomy/ethers-lib'
+// import { EntryPointContractV100 } from '@biconomy-devx/ethers-lib'
 import { EntryPoint } from '@account-abstraction/contracts'
 import { ClientConfig } from './ClientConfig' // added in this design
 import { arrayify, hexConcat } from 'ethers/lib/utils'
 import { Signer } from '@ethersproject/abstract-signer'
 import { TransactionDetailsForBatchUserOp } from './TransactionDetailsForUserOp'
-import { UserOperation, UserOpGasFields } from '@biconomy/core-types'
+import { UserOperation, UserOpGasFields } from '@biconomy-devx/core-types'
 import { BaseApiParams, BaseAccountAPI } from './BaseAccountAPI'
 import { Provider } from '@ethersproject/providers'
 import { BiconomyVerifyingPaymasterAPI } from './BiconomyVerifyingPaymasterAPI'
 import { PaymasterAPI } from './PaymasterAPI'
 import { resolveProperties } from 'ethers/lib/utils'
 import { calcPreVerificationGas, GasOverheads } from './calcPreVerificationGas'
-import { Transaction, PaymasterServiceDataType } from '@biconomy/core-types'
+import { Transaction, PaymasterServiceDataType } from '@biconomy-devx/core-types'
 import {
   Logger,
   deployCounterFactualEncodedData,
   EIP1559_UNSUPPORTED_NETWORKS
-} from '@biconomy/common'
+} from '@biconomy-devx/common'
 import { HttpRpcClient } from './HttpRpcClient'
 import { BiconomyTokenPaymasterAPI } from './BiconomyTokenPaymasterAPI'
 
