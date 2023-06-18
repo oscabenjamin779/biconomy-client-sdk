@@ -21,7 +21,7 @@ export type SponsorpshipInfo = {
 
 export type TokenPaymasterData = {
   mode?: string // todo: should make acceptable enums
-  tokenInfo: TokenInfo
+  tokenInfo?: TokenInfo
   sponsorshipInfo?: SponsorpshipInfo
 }
 

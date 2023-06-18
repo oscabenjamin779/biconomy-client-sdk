@@ -8,11 +8,9 @@ import { TransactionDetailsForBatchUserOp } from './TransactionDetailsForUserOp'
 import { UserOperation, UserOpGasFields } from '@biconomy-devx/core-types'
 import { BaseApiParams, BaseAccountAPI } from './BaseAccountAPI'
 import { Provider } from '@ethersproject/providers'
-import { BiconomyVerifyingPaymasterAPI } from './BiconomyVerifyingPaymasterAPI'
-import { PaymasterAPI } from './PaymasterAPI'
 import { resolveProperties } from 'ethers/lib/utils'
 import { calcPreVerificationGas, GasOverheads } from './calcPreVerificationGas'
-import { Transaction, PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { Transaction, TokenPaymasterData } from '@biconomy-devx/core-types'
 import {
   Logger,
   deployCounterFactualEncodedData,
@@ -186,15 +184,14 @@ export class SmartAccountAPI extends BaseAccountAPI {
 
     if (
       info.paymasterServiceData &&
-      info.paymasterServiceData.tokenPaymasterData &&
-      info.paymasterServiceData.tokenPaymasterData.tokenInfo &&
-      info.paymasterServiceData.tokenPaymasterData.tokenInfo.feeTokenAddress &&
-      info.paymasterServiceData.tokenPaymasterData.tokenInfo.feeTokenAddress != '' &&
-      info.paymasterServiceData.tokenPaymasterData.tokenInfo.feeTokenAddress != ZERO_ADDRESS
+      info.paymasterServiceData.tokenInfo &&
+      info.paymasterServiceData.tokenInfo.feeTokenAddress &&
+      info.paymasterServiceData.tokenInfo.feeTokenAddress != '' &&
+      info.paymasterServiceData.tokenInfo.feeTokenAddress != ZERO_ADDRESS
     ) {
       if (this.paymasterAPI instanceof BiconomyTokenPaymasterAPI) {
         // update calldata accordingly by checking allowance then batching token approval request
-        const erc20Address = info.paymasterServiceData.tokenPaymasterData.tokenInfo.feeTokenAddress
+        const erc20Address = info.paymasterServiceData.tokenInfo.feeTokenAddress
         Logger.log('erc20 address', erc20Address)
         const approveTx: Transaction = await this.paymasterAPI.createTokenApprovalRequest(
           erc20Address,
@@ -283,6 +280,7 @@ export class SmartAccountAPI extends BaseAccountAPI {
     partialUserOp.preVerificationGas =
       feeData?.preVerificationGas ?? (await this.getPreVerificationGas(partialUserOp))
 
+    // TODO // Review 
     partialUserOp.paymasterAndData = !this.paymasterAPI
       ? '0x'
       : await this.paymasterAPI.getPaymasterAndData(partialUserOp, info.paymasterServiceData)

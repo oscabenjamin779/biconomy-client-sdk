@@ -1,11 +1,11 @@
 import { UserOperation } from 'Types'
-import { PaymasterServiceDataType } from './PaymasterServiceTypes'
+import { TokenPaymasterData } from './PaymasterServiceTypes'
 
 // marked for deletion
 export interface IPaymasterAPI {
   getPaymasterAndData(
     userOp: Partial<UserOperation>,
-    paymasterServiceData?: PaymasterServiceDataType
+    paymasterServiceData?: TokenPaymasterData
   ): Promise<string>
 }
 

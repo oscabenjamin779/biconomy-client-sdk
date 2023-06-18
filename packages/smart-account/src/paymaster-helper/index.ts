@@ -1,7 +1,7 @@
 import { PaymasterAPI } from '@biconomy-devx/account-abstraction'
 import { BiconomyVerifyingPaymasterAPI } from '@biconomy-devx/account-abstraction'
 import { BiconomyTokenPaymasterAPI } from '@biconomy-devx/account-abstraction'
-import { PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { TokenPaymasterData } from '@biconomy-devx/core-types'
 import { Logger } from '@biconomy-devx/common'
 import fetch from 'node-fetch'
 
@@ -71,7 +71,7 @@ export async function sendRequest<T>({ url, method, body, headers = {} }: HttpRe
 
 export async function getPaymaster(
   paymasterUrl: string
-): Promise<PaymasterAPI<PaymasterServiceDataType> | undefined> {
+): Promise<PaymasterAPI<TokenPaymasterData> | undefined> {
   Logger.log('paymasterUrl being passed ', paymasterUrl)
 
   try {
@@ -92,7 +92,7 @@ export async function getPaymaster(
     const paymasterAPI = new BiconomyTokenPaymasterAPI({
       paymasterUrl: paymasterUrl,
       strictSponsorshipMode: false
-    }) as PaymasterAPI<PaymasterServiceDataType>
+    }) as PaymasterAPI<TokenPaymasterData>
 
     // paymasterAPI.paymasterAddress = response.result.address
     return paymasterAPI
@@ -100,7 +100,7 @@ export async function getPaymaster(
         const paymasterAPI = new BiconomyVerifyingPaymasterAPI({
           paymasterUrl: paymasterUrl,
           strictSponsorshipMode: false
-        }) as PaymasterAPI<PaymasterServiceDataType>
+        }) as PaymasterAPI<TokenPaymasterData>
 
         paymasterAPI.paymasterAddress = response.result.address
         return paymasterAPI

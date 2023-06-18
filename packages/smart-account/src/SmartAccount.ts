@@ -70,7 +70,7 @@ import {
   fallbackHandlerEncodedData
 } from '@biconomy-devx/common'
 import { BigNumber, ethers, Signer } from 'ethers'
-import { Transaction, PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { Transaction, TokenPaymasterData } from '@biconomy-devx/core-types'
 import { getPaymaster } from './paymaster-helper'
 
 // Create an instance of Smart Account with multi-chain support.

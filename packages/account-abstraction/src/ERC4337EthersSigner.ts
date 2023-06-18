@@ -5,7 +5,7 @@ import { BigNumber, Bytes, ethers } from 'ethers'
 import { ERC4337EthersProvider } from './ERC4337EthersProvider'
 import { ClientConfig } from './ClientConfig'
 import { HttpRpcClient } from './HttpRpcClient'
-import { UserOperation, PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { UserOperation, TokenPaymasterData } from '@biconomy-devx/core-types'
 import { Logger } from '@biconomy-devx/common'
 import { BaseAccountAPI } from './BaseAccountAPI'
 import { ClientMessenger } from '@biconomy/gasless-messaging-sdk'
@@ -29,7 +29,7 @@ export class ERC4337EthersSigner extends Signer {
   async sendTransaction(
     transaction: TransactionRequest,
     walletDeployOnly = false,
-    paymasterServiceData?: PaymasterServiceDataType,
+    paymasterServiceData?: TokenPaymasterData,
     engine?: any // EventEmitter
   ): Promise<TransactionResponse> {
     const socketServerUrl = this.config.socketServerUrl
@@ -165,7 +165,7 @@ export class ERC4337EthersSigner extends Signer {
 
   async sendTransactionBatch(
     transactions: TransactionRequest[],
-    paymasterServiceData?: PaymasterServiceDataType,
+    paymasterServiceData?: TokenPaymasterData,
     engine?: any // EventEmitter
   ): Promise<TransactionResponse> {
     const socketServerUrl = this.config.socketServerUrl

@@ -3,7 +3,6 @@ import { UserOperation } from '@biconomy-devx/core-types'
 import { HttpMethod, sendRequest } from './utils/httpRequests'
 import {
   PaymasterConfig,
-  PaymasterServiceDataType,
   VerifyingPaymasterData
 } from '@biconomy-devx/core-types'
 import { Logger } from '@biconomy-devx/common'

@@ -1,6 +1,6 @@
 import { BigNumberish } from 'ethers'
 import { BytesLike } from '@ethersproject/bytes'
-import { PaymasterServiceDataType } from '@biconomy-devx/core-types'
+import { TokenPaymasterData } from '@biconomy-devx/core-types'
 
 export interface TransactionDetailsForUserOp {
   target: string
@@ -20,5 +20,5 @@ export interface TransactionDetailsForBatchUserOp {
   gasLimit?: BigNumberish
   maxFeePerGas?: BigNumberish
   maxPriorityFeePerGas?: BigNumberish
-  paymasterServiceData?: PaymasterServiceDataType
+  paymasterServiceData?: TokenPaymasterData
 }
