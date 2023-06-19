@@ -1,6 +1,6 @@
 {
   "name": "@biconomy-devx/account-abstraction",
-  "version": "1.0.13",
+  "version": "1.0.17",
   "description": "Account abstraction APIs to prepare user operations ",
   "keywords": [
     "account-abstraction",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@account-abstraction/contracts": "^0.6.0",
     "@account-abstraction/utils": "^0.5.0",
-    "@biconomy-devx/common": "^1.0.13",
+    "@biconomy-devx/common": "^1.0.17",
     "@ethersproject/abstract-provider": "^5.7.0",
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/networks": "^5.7.0",
@@ -52,9 +52,9 @@
     "solidity-coverage": "^0.7.22"
   },
   "devDependencies": {
-    "@biconomy-devx/common": "^1.0.13",
-    "@biconomy-devx/core-types": "^1.0.13",
-    "@biconomy-devx/ethers-lib": "^1.0.13",
+    "@biconomy-devx/common": "^1.0.17",
+    "@biconomy-devx/core-types": "^1.0.17",
+    "@biconomy-devx/ethers-lib": "^1.0.17",
     "@biconomy-devx/transactions": "*",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
