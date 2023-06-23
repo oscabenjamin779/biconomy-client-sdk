@@ -1,7 +1,7 @@
 import {
   ChainId,
   SmartAccountVersion,
-} from '@biconomy/core-types'
+} from '@biconomy-devx/core-types'
 export type SmartAccountInfoResponse = {
   readonly name: string
   readonly version: string
