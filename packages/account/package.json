@@ -1,6 +1,6 @@
 {
   "name": "@biconomy-devx/account",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "This package provides apis for ERC-4337 based smart account implementations",
   "main": "./dist/src/index.js",
   "typings": "./dist/src/index.d.ts",
