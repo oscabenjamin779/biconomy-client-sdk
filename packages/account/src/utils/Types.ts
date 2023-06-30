@@ -2,7 +2,7 @@ import { Signer } from 'ethers'
 import { ChainId } from '@biconomy/core-types'
 import { BigNumberish } from 'ethers'
 import { IBundler } from '@biconomy/bundler'
-import { IPaymaster, PaymasterFeeQuote } from '@biconomy/paymaster'
+import { IHybridPaymaster, PaymasterFeeQuote, SponsorUserOperationDto } from '@biconomy/paymaster'
 
 export type EntrypointAddresses = {
   [address: string]: string
@@ -33,7 +33,7 @@ export type BiconomySmartAccountConfig = {
   chainId: ChainId
   entryPointAddress?: string
   bundler?: IBundler
-  paymaster?: IPaymaster
+  paymaster?: IHybridPaymaster<SponsorUserOperationDto>
   nodeClientUrl?: string
 }
 

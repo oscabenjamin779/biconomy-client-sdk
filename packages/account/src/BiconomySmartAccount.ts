@@ -40,6 +40,7 @@ export class BiconomySmartAccount extends SmartAccount implements IBiconomySmart
   private address!: string
   private smartAccountInfo!: ISmartAccount
   private _isInitialised!: boolean
+  paymaster!: IHybridPaymaster<SponsorUserOperationDto>
 
   constructor(readonly biconomySmartAccountConfig: BiconomySmartAccountConfig) {
     const { signer, rpcUrl, entryPointAddress, bundler, paymaster, chainId, nodeClientUrl } =
